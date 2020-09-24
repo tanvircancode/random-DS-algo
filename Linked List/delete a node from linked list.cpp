@@ -27,8 +27,9 @@ void deleteNode(int position)
     if(position == 1)
     {
         struct Node* temp1;
-        temp1 = head -> link;
-        head = temp1;
+        temp1 = head;
+        head = head -> link;
+        free(temp1);
     }
     else
     {
@@ -74,7 +75,7 @@ int main()
     insert(3);
     insert(1);
     print();
-    deleteNode(4);
+    deleteNode(3);
     print();
     return 0;
 }
