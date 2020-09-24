@@ -24,7 +24,7 @@ void print()
 
 void deleteNode(int position)
 {
-    if(position ==1 )
+    if(position == 1)
     {
         struct Node* temp1;
         temp1 = head -> link;
@@ -34,21 +34,15 @@ void deleteNode(int position)
     {
         struct Node* temp2;
         temp2 = head;
-
         for(int i=1; i<= position-2 ; i++)
         {
-            temp2 = head -> link;
-            head = temp2;
-            if(i == (position-2))
-            {
-                struct Node* temp3 = temp2 -> link;
-                temp2 = temp3 -> link;
-                head -> link = temp2;
-            }
+            temp2 = temp2 -> link;
         }
-
+        struct Node* temp3;
+        temp3 = temp2 -> link;
+        temp2 -> link = temp3 -> link;
+        free(temp3);
     }
-
 }
 
 void insert(int value)
@@ -80,7 +74,7 @@ int main()
     insert(3);
     insert(1);
     print();
-    deleteNode(3);
+    deleteNode(4);
     print();
     return 0;
 }
