@@ -21,7 +21,6 @@ void print()
     }
     cout<<endl;
 }
-
 void deleteNode(int position)
 {
     if(position == 1)
