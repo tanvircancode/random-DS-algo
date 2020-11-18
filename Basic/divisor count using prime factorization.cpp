@@ -39,6 +39,7 @@ int main()
                 cnt=1;
                 while(n % primes[i] == 0)
                 {
+                    //cout<<n/primes[i]<<endl;
                     n /= primes[i];
                     cnt++;
                 }
