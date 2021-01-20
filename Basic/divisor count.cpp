@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+4#include<bits/stdc++.h>
 using namespace std;
 
 int main()
@@ -24,7 +24,7 @@ int main()
             }
 
         }
-        cout<<cnt<<endl;
+        cout<<"Total Divisor : "<<cnt<<endl;
     }
 
 }

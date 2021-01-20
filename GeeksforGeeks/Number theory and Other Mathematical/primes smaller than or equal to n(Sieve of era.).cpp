@@ -10,8 +10,10 @@ void SieveofEratosthenes(int n)
     {
         if(prime[i])
         {
+            // cout<<"i : "<<i<<endl;
             for(int j=i*i; j<=n; j+=i)
             {
+                //cout<<"j : "<<j<<endl;
                 prime[j]=false;
             }
         }
